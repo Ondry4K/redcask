@@ -1,0 +1,6 @@
+– WiFi/Internet connected (and capable) device, recommended atleast 4mb bandwith.
+– Linux/MacOS environment (bash/zsh)
+– Python 3.11 and up
+
+*optional
+–Port Forwarding enabled on port 2277 (by default)

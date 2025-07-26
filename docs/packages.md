@@ -1,0 +1,1 @@
+I'll be using FastAPI for the routes, csv will be needed for reading/writing to the csv files, env will be used to read .env files whether in client or server, os for file managment, 

@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Courier New", monospace;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.4;
+    padding: 20px;
+}
+
+/* Login Section */
+#login {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+#login p {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#server-key {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+#server-key:focus {
+    outline: none;
+    border-color: #007acc;
+}
+
+button {
+    padding: 8px 16px;
+    background: #e0e0e0;
+    border: 1px solid #999;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background: #d0d0d0;
+}
+
+button:active {
+    background: #c0c0c0;
+    transform: translateY(1px);
+}
+
+#login-btn {
+    width: 100%;
+}
+
+/* Main App */
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #007acc;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#app > p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+#logout-btn {
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Sections */
+#status, #devices, #queue, #add-torrent {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#status > p, #devices > p, #queue > p, #add-torrent > p {
+    background: #007acc;
+    color: white;
+    padding: 8px 12px;
+    margin: 0;
+    font-weight: bold;
+    position: relative;
+}
+
+#status > p::before {
+    content: "📊 ";
+}
+
+#devices > p::before {
+    content: "💻 ";
+}
+
+#queue > p::before {
+    content: "📋 ";
+}
+
+#add-torrent > p::before {
+    content: "➕ ";
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background: #f8f8f8;
+}
+
+/* Status indicators */
+#status-list li::before {
+    content: "🔄 ";
+    margin-right: 5px;
+}
+
+#device-list li::before {
+    content: "🖥️ ";
+    margin-right: 5px;
+}
+
+#queue-list li::before {
+    content: "⏳ ";
+    margin-right: 5px;
+}
+
+/* Add Torrent Form */
+#add-torrent {
+    padding: 0;
+}
+
+#add-torrent > div {
+    padding: 15px;
+}
+
+#add-torrent input[type="text"], #add-torrent input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+#add-torrent input:focus {
+    outline: none;
+    border-color: #007acc;
+}
+
+#add-torrent-btn {
+    width: 100%;
+    background: #007acc;
+    color: white;
+    border-color: #005999;
+}
+
+#add-torrent-btn:hover {
+    background: #005999;
+}
+
+/* Loading animation */
+li:contains("Loading") {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Clearfix */
+#app::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #logout-btn {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

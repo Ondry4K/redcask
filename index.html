@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedCask Server</title>
+    <link rel="icon" type="image/svg+xml" href="/static/../logo.png">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/static/js/main.js" defer></script>
+</head>
+<body>
+    <div id="login">
+        <p>Please log in (enter the server key)</p>
+        <input type="password" id="server-key" placeholder="super secret key">
+        <button id="login-btn">Login</button>
+    </div>
+    <div id="app" style="display: none;">
+        <h1>RedCask Server</h1>
+        <p>Welcome to the RedCask server!</p>
+        <button id="logout-btn">Logout</button>
+        <!-- todo: make collapsable -->
+        <div id="status">
+            <p>Current status (all torrents)</p>
+            <ul id="status-list">
+                <li>Loading...</li>
+            </ul>
+        </div>
+    <div id="devices">
+        <p>Devices</p>
+        <ul id="device-list">
+            <li>Loading devices...</li>
+        </ul>
+    </div>
+    <div id="queue">
+        <p>Queue</p>
+        <ul id="queue-list">
+            <!-- here we must show the UUID of the device as well as the torrent file/magnet(shrunk to first 16 letters) and timestamp -->
+            <li>Loading queue...</li>
+        </ul>
+    </div>
+    <!-- end of todo-->
+    <div id="add-torrent">
+        <p>Add a torrent to queue</p>
+        <div>
+            <input type="text" id="magnet-url" placeholder="Magnet URL">
+            <input type="text" id="uuid" placeholder="Target Device UUID" required>
+            <input type="file" id="torrent-file" accept=".torrent">
+            <button id="add-torrent-btn">Add Torrent</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
