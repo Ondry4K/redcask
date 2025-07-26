@@ -17,7 +17,7 @@ pip install fastapi csv pydantic pathlib uuid datetime base64 dotenv
 ```env
 KEY=TOP_SECRET
 ```  
-  In this step I also suggest encoding your key in base64 and saving it to a txt folder somewhere for later use because you will need it.  
+  In this step I also suggest encoding your key in base64 and saving it to a txt file somewhere for later use because you will need it.  
 7. Test the app with fastapi:  
    ```python
    fastapi dev server.py --host 0.0.0.0 --port 8000 --reload
