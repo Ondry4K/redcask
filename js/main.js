@@ -1,3 +1,4 @@
+// p.s. some of this is not my work, i simply cba to learn a whole new programming language for the backend of my web-ui
 // UI Update Functions for RedCask
 var serverKey = ""; // Store the key globally for later use
 var base = window.location.origin;
