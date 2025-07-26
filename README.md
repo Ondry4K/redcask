@@ -22,7 +22,7 @@ KEY=TOP_SECRET
    ```python
    fastapi dev server.py --host 0.0.0.0 --port 8000 --reload
    ```  
-   (p.s.: you can change the port to whatever your heart desires)
+   (p.s.: you can change the port to whatever your heart desires)  
 8. If you set up everything correctly you should be able to access the server on the localhost, the root contains the web ui.  
   ## IF something went wrong:
   - either i fucked up (very likely)
