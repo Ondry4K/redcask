@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import time
 from .routes import validate_key, login, queue, status, devices
-
+# useless commit
 app = FastAPI()
 
 app.state.start_time = time.time()
